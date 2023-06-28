@@ -1,0 +1,47 @@
+.encrypt-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &__textarea {
+        font-size: 32px;
+        font-family: 'Inter';
+        color: var(--primary);
+        width: 87.5%;
+        padding: 0px 80px;
+        margin: 80px 0px;
+        height: 100%;
+        background: transparent;
+        border: none;
+        resize: none;
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: inherit;
+        }
+    }
+
+    &__alert {
+        width: 87.5%;
+        padding: 0px 80px;
+        margin-bottom: 16px;
+        display: flex;
+        color: #495057;
+        font-size: 12px;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    &__buttons {
+        box-sizing: border-box;
+        width: 87.5%;
+        padding: 0px 80px 32px;
+        display: flex;
+        gap: 24px;
+    }
+}

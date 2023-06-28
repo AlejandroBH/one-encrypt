@@ -2,57 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <title>Encriptador de texto</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="img/Favicon.svg"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1><img src="img/Logo.svg" alt="Logo Alura"></h1>
-    </header>
-
-    <main>
-        <div class="container">
-            <section>
-                <div class="box-left">
-                    <div class="reading">
-                        <textarea id="readText" placeholder="Ingrese su texto aqui"></textarea>
-                        <p id="msg-empty-section">-</p>
-                        <p id="msg-error"><img src="img/Info.svg" alt=""> Solo letras minúsculas y sin acentos</p>
-                        <button id="btnEncrypt" class="btn-section">Encriptar!</button>
-                        <button id="btnDecrypt" class="btn-section">Desencriptar!</button>
-                    </div>
-                </div>
-            </section>
-            <aside>
-                <div class="box-right">
-                    <div id="result-on">
-                        <textarea id="resultText" readonly></textarea>
-                        <p id="msg-empty-aside">-</p>
-                        <p id="msg-info"><img src="img/Info.svg" alt=""> Texto copiado al portapapeles</p>
-                        <button id="btnCopy" class="btn-aside">Copiar</button>
-                    </div>
-                    <div id="result-off">
-                        <img src="img/Muñeco.svg" alt="">
-                        <h3>Ningún Mensaje Fue encontrado</h3>
-                        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </main>
-
-    <footer>
-        <p>Alura Challenger 1 - Develop by A. Barrera 2022</p>
-        <a target="_blank" href="https://www.linkedin.com/in/alejandro-bh91/"><img src="img/LinkedIn_Logo.svg" alt="LinkedIn"></a>
-        <a target="_blank" href="https://github.com/AlejandroBH/"><img src="img/Github_Logo.svg" alt="Github"></a>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="container">
+        <section class="encrypt-left">
+            <header class="header">
+                <img class="header__logo" src="assets/images/logo.svg" alt="logo alura">
+            </header>
+            <textarea class="encrypt-left__textarea" placeholder="Ingrese el texto aqui">Lorem ipsum dolor sit amet consectetur adipiscing elit Orci montes sit et diam risus scelerisque vitae est Tortor maecenas nunc ut laoreet Eget diam mauris quam quisque ut eget fringilla sit elit Libero sodales duis fames id diam feugiat aliquet non egestas</textarea>
+            <span class="encrypt-left__alert"><img src="assets/images/alert-icon.svg" alt="alert img">Solo letras minúsculas y sin acentos</span>
+            <div class="encrypt-left__buttons">
+                <button class="button button--primary">Encriptar</button>
+                <button class="button button--secondary">Desencriptar</button>
+            </div>
+        </section>
+        <section class="encrypt-right">
+            <textarea class="encrypt-right__textarea" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</textarea>
+            <div class="encrypt-right__buttons">
+                <button class="button">Copiar</button>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
