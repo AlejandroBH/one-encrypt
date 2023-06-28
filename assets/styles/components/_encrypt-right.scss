@@ -50,12 +50,12 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .encrypt-right {
         margin-bottom: 32px;
 
         &__textarea {
-            height: 180px;
+            height: 200px;
         }
 
         &__image {
@@ -64,10 +64,12 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     .encrypt-right {
-        &__textarea {
-            height: 432px;
+        padding: 18px;
+
+        &__buttons {
+            margin-top: 18px;
         }
     }
 }
