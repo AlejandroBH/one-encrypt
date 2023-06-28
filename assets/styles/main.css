@@ -21,7 +21,17 @@
 .header {
   width: 100%;
 }
+.header__logo {
+  width: 120px;
+  height: 48px;
+}
 
+@media screen and (max-width: 768px) {
+  .header__logo {
+    width: auto;
+    height: auto;
+  }
+}
 .encrypt-left {
   display: flex;
   flex-direction: column;
@@ -29,6 +39,7 @@
 }
 .encrypt-left__textarea {
   font-size: 32px;
+  line-height: 150%;
   font-family: "Inter";
   color: var(--primary);
   width: 87.5%;
