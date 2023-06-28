@@ -8,6 +8,16 @@
   grid-template-columns: auto 400px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 24px 16px;
+  }
+}
 .header {
   width: 100%;
 }
@@ -57,13 +67,40 @@
   gap: 24px;
 }
 
+@media screen and (max-width: 768px) {
+  .encrypt-left__textarea {
+    width: 100%;
+    padding: 0px;
+    margin: 116px 0px;
+    height: 480px;
+  }
+  .encrypt-left__alert {
+    width: 100%;
+    padding: 0px;
+  }
+  .encrypt-left__buttons {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .encrypt-left__textarea {
+    margin: 80px 0px 64px;
+    height: 510px;
+  }
+  .encrypt-left__buttons {
+    flex-direction: column;
+  }
+}
 .encrypt-right {
   background: #FFFFFF;
   border-radius: 32px;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   padding: 32px;
-  display: flex;
+  display: none;
   flex-direction: column;
+  justify-content: center;
 }
 .encrypt-right__textarea {
   width: 100%;
@@ -78,10 +115,45 @@
 .encrypt-right__textarea:focus-visible {
   outline: none;
 }
+.encrypt-right__image {
+  width: 100%;
+  margin-bottom: 32px;
+}
+.encrypt-right__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #343A40;
+}
+.encrypt-right__subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #343A40;
+}
 .encrypt-right__buttons {
   margin-top: 32px;
 }
+.encrypt-right--active {
+  display: flex;
+}
 
+@media screen and (max-width: 768px) {
+  .encrypt-right {
+    margin-bottom: 32px;
+  }
+  .encrypt-right__textarea {
+    height: 180px;
+  }
+  .encrypt-right__image {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .encrypt-right__textarea {
+    height: 432px;
+  }
+}
 .button {
   font-family: "Inter";
   font-size: 16px;

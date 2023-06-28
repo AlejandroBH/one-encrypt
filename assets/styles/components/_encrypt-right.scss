@@ -3,8 +3,9 @@
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     padding: 32px;
-    display: flex;
+    display: none;
     flex-direction: column;
+    justify-content: center;
 
     &__textarea {
         width: 100%;
@@ -21,7 +22,52 @@
         }
     }
 
+    &__image {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #343A40;
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-size: 16px;
+        color: #343A40;
+    }
+
     &__buttons {
         margin-top: 32px;
+    }
+
+    &--active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .encrypt-right {
+        margin-bottom: 32px;
+
+        &__textarea {
+            height: 180px;
+        }
+
+        &__image {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .encrypt-right {
+        &__textarea {
+            height: 432px;
+        }
     }
 }
