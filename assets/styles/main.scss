@@ -3,6 +3,7 @@
 @import 'components/encrypt-left';
 @import 'components/encrypt-right';
 @import 'components/button';
+@import 'components/credits';
 
 * {
     margin: 0;
@@ -23,6 +24,7 @@ body {
     color: var(--primary);
     display: flex;
     height: 100vh;
+    position: relative;
 }
 
 @font-face {
