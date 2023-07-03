@@ -1,7 +1,7 @@
 "use strict";
 
-import { copy, decrypt, encrypt } from "./controller/button.controller.js";
-import { createCredits } from "./controller/template.controller.js";
+import { copy, decrypt, encrypt } from "./controllers/button.controller.js";
+import { createCredits } from "./controllers/template.controller.js";
 
 export const encryptTextareaLeft = document.querySelector("[data-encrypt-textarea-left]");
 export const encryptTextareaRight = document.querySelector("[data-encrypt-textarea-right]");
