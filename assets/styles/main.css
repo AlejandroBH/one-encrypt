@@ -139,6 +139,15 @@
   font-size: 16px;
   color: #343A40;
 }
+.encrypt-right__alert {
+  color: #495057;
+  font-size: 14px;
+  display: flex;
+  margin-bottom: 16px;
+}
+.encrypt-right__alert img {
+  margin-right: 8px;
+}
 .encrypt-right__buttons {
   margin-top: 32px;
 }

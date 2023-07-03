@@ -7,10 +7,13 @@ export const encryptTextareaRight = document.querySelector("[data-encrypt-textar
 export const buttonEncrypt = document.querySelector("[data-button-encrypt]");
 export const buttonDecrypt = document.querySelector("[data-button-decrypt]");
 export const encryptRight = document.querySelectorAll("[data-ecrypt-right]");
+export const alertCopy = document.querySelector("[data-alert-copy]");
 export const buttonCopy = document.querySelector("[data-button-copy]");
 
-encryptTextareaLeft.addEventListener('keypress', (e) => {
-  const forbidden = 'áéíóúÁÉÍÓÚ';
+alertCopy.style.display = "none";
+
+encryptTextareaLeft.addEventListener("keypress", (e) => {
+  const forbidden = "áéíóúÁÉÍÓÚ";
   if (forbidden.includes(e.key)){
     e.preventDefault();
   }
@@ -25,5 +28,5 @@ buttonDecrypt.addEventListener("click", () => {
 });
 
 buttonCopy.addEventListener("click", () => {
-  copy(encryptTextareaRight.value)
+  copy(encryptTextareaRight.value);
 });

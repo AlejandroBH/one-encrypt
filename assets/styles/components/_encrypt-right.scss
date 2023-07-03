@@ -41,6 +41,17 @@
         color: #343A40;
     }
 
+    &__alert {
+        color: #495057;
+        font-size: 14px;
+        display: flex;
+        margin-bottom: 16px;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
     &__buttons {
         margin-top: 32px;
     }

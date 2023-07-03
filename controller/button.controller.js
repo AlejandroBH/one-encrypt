@@ -1,6 +1,6 @@
 "use strict";
 
-import { buttonDecrypt, buttonEncrypt, encryptRight, encryptTextareaLeft, encryptTextareaRight } from "../app.js";
+import { alertCopy, buttonDecrypt, buttonEncrypt, encryptRight, encryptTextareaLeft, encryptTextareaRight } from "../app.js";
 
 export const encrypt = (value) => {
   if (value != "") {
@@ -17,6 +17,8 @@ export const encrypt = (value) => {
     buttonDecrypt.classList.remove("button--active");
     encryptRight[0].classList.add("encrypt-right--active");
     encryptRight[1].classList.remove("encrypt-right--active");
+    alertCopy.style.display = "none";
+    encryptTextareaRight.focus();
   } else {
     encryptTextareaLeft.focus();
   }
@@ -37,6 +39,8 @@ export const decrypt = (value) => {
     buttonDecrypt.classList.add("button--active");
     encryptRight[0].classList.add("encrypt-right--active");
     encryptRight[1].classList.remove("encrypt-right--active");
+    alertCopy.style.display = "none";
+    encryptTextareaRight.focus();
   } else {
     encryptTextareaLeft.focus();
   }
@@ -45,4 +49,5 @@ export const decrypt = (value) => {
 export const copy = (value) => {
   navigator.clipboard.writeText(value);
   encryptTextareaLeft.value = value;
+  alertCopy.style.display = "flex";
 }
