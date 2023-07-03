@@ -9,6 +9,13 @@ export const buttonDecrypt = document.querySelector("[data-button-decrypt]");
 export const encryptRight = document.querySelectorAll("[data-ecrypt-right]");
 export const buttonCopy = document.querySelector("[data-button-copy]");
 
+encryptTextareaLeft.addEventListener('keypress', (e) => {
+  const forbidden = 'áéíóúÁÉÍÓÚ';
+  if (forbidden.includes(e.key)){
+    e.preventDefault();
+  }
+});
+
 buttonEncrypt.addEventListener("click", () => {
   encrypt(encryptTextareaLeft.value);
 });
