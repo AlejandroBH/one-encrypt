@@ -1,11 +1,10 @@
 "use strict";
 
-import { alertCopy, buttonDecrypt, buttonEncrypt, encryptRight, encryptTextareaLeft, encryptTextareaRight } from "../app.js";
+import { alertCopy, buttonCopy, buttonDecrypt, buttonEncrypt, encryptRight, encryptTextareaLeft, encryptTextareaRight } from "../app.js";
 
 export const encrypt = (value) => {
   if (value != "") {
     const process = value
-      .toLowerCase()
       .replaceAll("e", "enter")
       .replaceAll("i", "imes")
       .replaceAll("a", "ai")
@@ -18,7 +17,7 @@ export const encrypt = (value) => {
     encryptRight[0].classList.add("encrypt-right--active");
     encryptRight[1].classList.remove("encrypt-right--active");
     alertCopy.style.display = "none";
-    encryptTextareaRight.focus();
+    buttonCopy.focus();
   } else {
     encryptTextareaLeft.focus();
   }
@@ -27,7 +26,6 @@ export const encrypt = (value) => {
 export const decrypt = (value) => {
   if (value != "") {
     const process = value
-      .toLowerCase()
       .replaceAll("enter", "e")
       .replaceAll("imes", "i")
       .replaceAll("ai", "a")
@@ -40,7 +38,7 @@ export const decrypt = (value) => {
     encryptRight[0].classList.add("encrypt-right--active");
     encryptRight[1].classList.remove("encrypt-right--active");
     alertCopy.style.display = "none";
-    encryptTextareaRight.focus();
+    buttonCopy.focus();
   } else {
     encryptTextareaLeft.focus();
   }
@@ -50,4 +48,15 @@ export const copy = (value) => {
   navigator.clipboard.writeText(value);
   encryptTextareaLeft.value = value;
   alertCopy.style.display = "flex";
+}
+
+export const removeAccent = (value) => {
+  const process = value
+    .toLowerCase()
+    .replaceAll("á","a")
+    .replaceAll("é","e")
+    .replaceAll("í","i")
+    .replaceAll("ó","o")
+    .replaceAll("ú","u")
+    return process;
 }

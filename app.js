@@ -1,6 +1,6 @@
 "use strict";
 
-import { copy, decrypt, encrypt } from "./controllers/button.controller.js";
+import { copy, decrypt, encrypt, removeAccent } from "./controllers/button.controller.js";
 import { createCredits } from "./controllers/template.controller.js";
 
 export const encryptTextareaLeft = document.querySelector("[data-encrypt-textarea-left]");
@@ -23,11 +23,13 @@ encryptTextareaLeft.addEventListener("keypress", (e) => {
 });
 
 buttonEncrypt.addEventListener("click", () => {
-  encrypt(encryptTextareaLeft.value);
+  const text = removeAccent(encryptTextareaLeft.value);
+  encrypt(text);
 });
 
 buttonDecrypt.addEventListener("click", () => {
-  decrypt(encryptTextareaLeft.value);
+  const text = removeAccent(encryptTextareaLeft.value);
+  decrypt(text);
 });
 
 buttonCopy.addEventListener("click", () => {
