@@ -11,6 +11,7 @@ export const encryptRight = document.querySelectorAll("[data-ecrypt-right]");
 export const alertCopy = document.querySelector("[data-alert-copy]");
 export const buttonCopy = document.querySelector("[data-button-copy]");
 export const buttonCredits = document.querySelector("[data-button-credits]");
+export const bodyPage = document.querySelector("body");
 export const credits = document.querySelector(".credits");
 
 alertCopy.style.display = "none";
@@ -37,10 +38,12 @@ buttonCopy.addEventListener("click", () => {
 });
 
 buttonCredits.addEventListener("click", () => {
+  bodyPage.style.overflow = "hidden";
   createCredits();
   credits.style.display = "flex";
   const buttonClose = document.querySelector("[data-button-close]");
   buttonClose.addEventListener("click", () => {
+    bodyPage.style.overflow = "auto";
     credits.style.display = "none";
   });
 });
